@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Responsive Design -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Personal Portfolio Website">
+    <meta name="keywords" content="Portfolio, HTML5, Accessibility">
+    <meta name="author" content="Surya">
+
+    <title>My Portfolio</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>My Portfolio</h1>
+
+        <!-- Navigation -->
+        <nav aria-label="Main Navigation">
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+
+        <!-- About Section -->
+        <section id="about">
+            <h2>About Me</h2>
+
+            <p>
+                I am learning Web Development and Full Stack Development.
+            </p>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects">
+            <h2>Projects</h2>
+
+            <article>
+                <h3>Banking Website</h3>
+
+                <p>
+                    Developed a banking application using HTML, CSS, JavaScript and Node.js.
+                </p>
+            </article>
+
+            <article>
+                <h3>Portfolio Website</h3>
+
+                <p>
+                    Created a responsive personal portfolio website.
+                </p>
+            </article>
+        </section>
+        <!-- Achievement Section -->
+<section id="achievements">
+
+    <h2>Achievements</h2>
+
+    <article>
+        <h3>AQVH Hackathon Participant</h3>
+
+        <p>
+            Participated in the AQVH Hackathon and collaborated with a team to develop innovative technology solutions and improve problem-solving skills.
+        </p>
+    </article>
+
+</section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+
+            <h2>Contact Me</h2>
+
+            <!-- Accessible Form -->
+            <form>
+
+                <label for="name">Name:</label>
+                <input type="text"
+                       id="name"
+                       name="name"
+                       placeholder="Enter your name"
+                       required>
+
+                <br><br>
+
+                <label for="email">Email:</label>
+                <input type="email"
+                       id="email"
+                       name="email"
+                       placeholder="Enter your email"
+                       required>
+
+                <br><br>
+
+                <label for="message">Message:</label>
+
+                <textarea id="message"
+                          name="message"
+                          rows="5"
+                          placeholder="Enter message">
+                </textarea>
+
+                <br><br>
+
+                <button type="submit">
+                    Send
+                </button>
+
+            </form>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 My Portfolio Website</p>
+    </footer>
+
+</body>
+</html>
