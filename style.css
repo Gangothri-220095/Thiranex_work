@@ -1,60 +1,150 @@
-body {
-    font-family: Arial;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
+/* CSS Variables */
+:root{
+    --primary-color:#1e3a8a;
+    --secondary-color:#2563eb;
+    --bg-color:#f4f7fc;
+    --card-bg:white;
+    --text-color:#333;
 }
 
-header {
-    background: #1e3a8a;
-    color: white;
-    padding: 20px;
-    text-align: center;
+/* Reset */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-nav ul {
-    list-style: none;
-    padding: 0;
+/* Body */
+body{
+    font-family:Arial, sans-serif;
+    background:var(--bg-color);
+    color:var(--text-color);
+    line-height:1.6;
 }
 
-nav ul li {
-    display: inline;
-    margin: 10px;
+/* Header */
+header{
+    background:var(--primary-color);
+    color:white;
+    text-align:center;
+    padding:25px;
 }
 
-nav ul li a {
-    color: white;
-    text-decoration: none;
+/* Navigation using Flexbox */
+nav{
+    background:var(--secondary-color);
+    padding:15px;
 }
 
-section {
-    padding: 20px;
+nav ul{
+    display:flex;
+    justify-content:center;
+    list-style:none;
+    gap:25px;
 }
 
-article {
-    background: #f4f4f4;
-    padding: 15px;
-    margin: 10px 0;
-    border-radius: 5px;
+nav ul li a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+nav ul li a:hover{
+    color:yellow;
+}
+
+/* Main Layout using Grid */
+main{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+    padding:20px;
+}
+
+/* Sections */
+section{
+    background:var(--card-bg);
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Project Cards */
+article{
+    background:#eef2ff;
+    padding:15px;
+    margin-top:15px;
+    border-left:5px solid var(--primary-color);
+    border-radius:5px;
+}
+
+/* Form Styling */
+form{
+    display:flex;
+    flex-direction:column;
 }
 
 form input,
-form textarea {
-    width: 100%;
-    padding: 10px;
+form textarea{
+    padding:10px;
+    margin-top:5px;
+    margin-bottom:15px;
+    border:1px solid #ccc;
+    border-radius:5px;
 }
 
-button {
-    background: blue;
-    color: white;
-    padding: 10px 15px;
-    border: none;
+/* Button */
+button{
+    background:var(--primary-color);
+    color:white;
+    padding:10px;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+    transition:0.3s;
 }
 
-footer {
-    background: #111;
-    color: white;
-    text-align: center;
-    padding: 10px;
+button:hover{
+    background:var(--secondary-color);
 }
 
+/* Footer */
+footer{
+    background:#111827;
+    color:white;
+    text-align:center;
+    padding:15px;
+    margin-top:20px;
+}
+
+/* Responsive Design */
+
+/* Tablet */
+@media(max-width:768px){
+
+    main{
+        grid-template-columns:1fr;
+    }
+
+    nav ul{
+        flex-direction:column;
+        align-items:center;
+    }
+}
+
+/* Mobile */
+@media(max-width:480px){
+
+    header{
+        font-size:14px;
+    }
+
+    section{
+        padding:15px;
+    }
+
+    nav ul{
+        gap:10px;
+    }
+}
